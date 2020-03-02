@@ -1,24 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import got from './got.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to Kodflix App!</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome to Kodflix</h1>
+      <img src={got} alt="Game Of Thrones" />
     </div>
   );
 }
-
 export default App;
