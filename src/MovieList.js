@@ -8,7 +8,7 @@ import witcher from './images/witcher.jfif';
 
 import Movie from './Movie';
 
-export default function Covers() {
+export default function MovieList() {
   return (
     <div>
       <div className="row">

@@ -1,13 +1,12 @@
 import React from 'react';
-import got from './got.jpg';
 import './App.css';
-import Covers from './Covers'
+import MovieList from './MovieList'
 
 function App() {
   return (
     <div className="App">
       <h1>Welcome to Kodflix</h1>
-      <Covers />
+      <MovieList />
     </div>
   );
 }
