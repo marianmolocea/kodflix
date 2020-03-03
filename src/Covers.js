@@ -6,18 +6,20 @@ import prisonBreak from './images/prison-breack.jpg'
 import vikings from './images/vikings.jpg'
 import witcher from './images/witcher.jfif'
 
+import Movie from './Movie'
+
 export default function Covers() {
   return (
     <div className="container">
       <div className="row">
-        <img src={arrow} alt="Arrow"/>
-        <img src={vikings} alt="The Vikings" />
-        <img src={got} alt="Game Of Thrones" />
+        <Movie image={arrow} />
+        <Movie image={got} />
+        <Movie image={vikings} />
       </div>
       <div className="row">
-        <img src={prisonBreak} alt="Prison Break" />
-        <img src={blackList} alt="Black List" />
-        <img src={witcher} alt="The Witcher" />
+        <Movie image={blackList} />
+        <Movie image={prisonBreak} />
+        <Movie image={witcher} />
       </div>
     </div>
   );
