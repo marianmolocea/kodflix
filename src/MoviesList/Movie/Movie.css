@@ -8,6 +8,12 @@
 
 .Movie img{
   width: 100%;
+  cursor: pointer;
+  transition: transform .5s ease;
+}
+
+.Movie img:hover{
+  transform: scale(1.1);
 }
 
 .Movie .title {
@@ -25,4 +31,5 @@
 
 .Movie:hover .title {
   bottom: 0;
+  cursor: pointer;
 }
