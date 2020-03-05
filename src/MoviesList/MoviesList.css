@@ -1,10 +1,18 @@
 .MoviesList .container{
   display: flex;
+  overflow: hidden;
+  height: 60vh;
 }
 
+@media only screen and (max-width: 1200px) {
+  .MoviesList .container{
+    height: 50vh;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .MoviesList .container{
     flex-direction: column;
+    height: auto;
   }
 }

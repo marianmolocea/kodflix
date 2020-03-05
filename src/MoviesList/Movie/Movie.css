@@ -2,14 +2,14 @@
   position: relative;
   flex: 1;
   flex-grow: 1;
-  height: 600px;
+  height: 100%;
   overflow: hidden;
 }
 
 .Movie img{
   width: 100%;
   cursor: pointer;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .Movie img:hover{
@@ -33,3 +33,4 @@
   bottom: 0;
   cursor: pointer;
 }
+
