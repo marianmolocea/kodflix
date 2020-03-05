@@ -1,0 +1,10 @@
+.MoviesList .container{
+  display: flex;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .MoviesList .container{
+    flex-direction: column;
+  }
+}

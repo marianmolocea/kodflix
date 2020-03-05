@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import MovieList from './MovieList'
+import MoviesList from './MoviesList/MoviesList'
 
 function App() {
   return (
     <div className="App">
       <h1>Welcome to Kodflix</h1>
-      <MovieList />
+      <MoviesList />
     </div>
   );
 }

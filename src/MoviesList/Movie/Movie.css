@@ -1,0 +1,28 @@
+.Movie{
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  height: 600px;
+  overflow: hidden;
+}
+
+.Movie img{
+  width: 100%;
+}
+
+.Movie .title {
+  position: absolute;
+  width: 100%;
+  background-color: crimson;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 20px 0;
+  bottom: -100px;
+  opacity: 0.8;
+  transition: bottom 0.5s;
+}
+
+.Movie:hover .title {
+  bottom: 0;
+}
