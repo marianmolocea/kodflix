@@ -1,17 +1,17 @@
-.MoviesList .container{
+.Gallery .container{
   display: flex;
   overflow: hidden;
   height: 60vh;
 }
 
 @media only screen and (max-width: 1200px) {
-  .MoviesList .container{
+  .Gallery .container{
     height: 50vh;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .MoviesList .container{
+  .Gallery .container{
     flex-direction: column;
     height: auto;
   }

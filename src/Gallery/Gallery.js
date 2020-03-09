@@ -7,11 +7,11 @@ import vikings from '../images/vikings.jpg';
 import witcher from '../images/witcher.jfif';
 
 import Movie from './Movie/Movie';
-import './MoviesList.css';
+import './Gallery.css';
 
-export default function MoviesList() {
+export default function Gallery() {
   return (
-    <div className="MoviesList">
+    <div className="Gallery">
       <div className="container">
         <Movie image={arrow} title="Arrow" />
         <Movie image={got} title="Games of Thrones" />
