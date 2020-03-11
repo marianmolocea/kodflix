@@ -1,18 +1,11 @@
 .Gallery .container{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
   overflow: hidden;
-  height: 60vh;
-}
-
-@media only screen and (max-width: 1200px) {
-  .Gallery .container{
-    height: 50vh;
-  }
 }
 
 @media only screen and (max-width: 768px) {
   .Gallery .container{
-    flex-direction: column;
-    height: auto;
+    grid-template-columns: 1fr;
   }
 }
