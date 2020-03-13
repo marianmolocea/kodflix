@@ -5,7 +5,9 @@ export default class Details extends Component {
 
   constructor() {
     super();
-    this.state = { message: 'Hello, this will be the details page for each Movie & TV show :)'}
+    this.state = { 
+      message: 'Hello, this will be the details page for each Movie & TV show :)'
+    }
   }
 
   componentDidMount() {

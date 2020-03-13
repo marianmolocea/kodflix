@@ -1,6 +1,6 @@
 .Gallery .container{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   overflow: hidden;
 }
 
