@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700,800&display=swap');
 
+* {
+  background-color: #222222;
+}
+
 .App {
   text-align: center;
   font-family: 'Raleway', sans-serif;
+}
 
+h1 {
+  margin: 20px 0;
+  color: white;
+}
+
+p{
+  margin: 0;
 }
 
 button {
