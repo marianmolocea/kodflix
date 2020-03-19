@@ -1,7 +1,8 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
+const movieData = require('./movieData.js');
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/rest/shows', (req, res) => res.send(movieData));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
