@@ -10,7 +10,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "npm-run-all": "^4.1.5"
   },
   "scripts": {
     "start": "npm-run-all -s build start-backend",
@@ -37,9 +38,7 @@
     ]
   },
   "devDependencies": {
-    "nodemon": "^2.0.2",
-    "npm-run-all": "^4.1.5"
+    "nodemon": "^2.0.2"
   },
-
   "proxy": "http://localhost:3001"
 }
