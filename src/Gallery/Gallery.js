@@ -10,7 +10,6 @@ export default function Gallery() {
       <h1>Welcome to Kodflix</h1>
       <div className="container">
         <Movies />
-        <GetMoviesData />
       </div>
     </div>
 
