@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3001;
 const movieData = require('./movieData.js');
+const path = require('path');
 
 app.get('/rest/shows', (req, res) => res.send(movieData));
 
