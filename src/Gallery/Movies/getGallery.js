@@ -1,4 +1,4 @@
-import arrow from '../../images/arrow.png';
+/* import arrow from '../../images/arrow.png';
 import blackList from '../../images/black-list.jpg';
 import got from '../../images/got.jpg';
 import prisonBreak from '../../images/prison-breack.jpg';
@@ -44,4 +44,4 @@ export default function getGallery() {
     synopsis: "Geralt of Rivia is a witcher, a mutant with special powers who kills monsters for money. The land is in a state of turmoil, due to the empire of Nilfgaard seeking to enlarge its territory. Among the refugees of this struggle is Cirilla, the Princess of Cintra, one of Nilfgaard's victims. She and Geralt share a destiny. Meanwhile, another figure looms large in Geralt's adventures: Yennefer, a sorceress." 
   },
   ]
-}
+} */

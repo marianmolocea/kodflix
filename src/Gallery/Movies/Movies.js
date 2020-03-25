@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import getGallery from './getGallery'
 import Movie from '../Movie/Movie'
 
 export default class Movies extends Component {
@@ -7,7 +6,7 @@ export default class Movies extends Component {
   constructor(){
     super();
     this.state = {
-      data: []
+      moviesData: []
     }
   }
 
@@ -16,14 +15,14 @@ export default class Movies extends Component {
       .then((response) => {
         return response.json();
       })
-      .then((data) => {
-        this.setState({data});
+      .then((moviesData) => {
+        this.setState({moviesData});
       });
   }
 
   render() {
     return (
-      this.state.data.map(movie => 
+      this.state.moviesData.map(movie => 
       <Movie
         key={movie.id}
         id={movie.id}
