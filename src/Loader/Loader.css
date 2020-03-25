@@ -1,0 +1,60 @@
+:root {
+  --loader-bar-initial-height: 50px;
+  --loader-bar-end-height: 40px;
+}
+
+.Loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.Loader .bar1,
+.Loader .bar2,
+.Loader .bar3{
+  margin: 7px;
+  width: 15px;
+  height: var(--loader-bar-initial-height);
+  background-color: white;
+}
+
+.Loader .bar1 {
+  animation: bar1 1.2s ease-in infinite;
+}
+.Loader .bar2 {
+  animation: bar2 1.2s ease-in-out infinite;
+  animation-delay: 400ms;
+}
+.Loader .bar3 {
+  animation: bar3 1.2s ease-out infinite;
+  animation-delay: 800ms;
+}
+
+@keyframes bar1 {
+  50% {
+    height: var(--loader-bar-end-height)
+  }
+  100% {
+    height: var(--loader-bar-initial-height);
+  }
+}
+@keyframes bar2 {
+  50% {
+    height: var(--loader-bar-end-height)
+  }
+  100% {
+    height: var(--loader-bar-initial-height);
+  }
+}
+@keyframes bar3 {
+  50% {
+    height: var(--loader-bar-end-height)
+  }
+  100% {
+    height: var(--loader-bar-initial-height);
+  }
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Details.css'
 import MovieDetails from './MovieDetails/MovieDetails'
+import Loader from '../Loader/Loader'
 
 export default class Details extends Component {
 
@@ -28,7 +29,7 @@ export default class Details extends Component {
 
   render() {
     return !this.state.isLoaded ? 
-      <div>Loading...</div> :
+      <Loader /> :
       !this.state.movie ?
         <Redirect to='/not-found' /> :
         <MovieDetails movie={this.state.movie} />
