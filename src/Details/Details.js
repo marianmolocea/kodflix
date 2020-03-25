@@ -18,12 +18,12 @@ export default class Details extends Component {
     fetch('/rest/shows')
       .then((response) => {
          return response.json();
-     })
+      })
       .then((moviesData) => {
         let movieId = this.props.match.params.movieId;
         let movie = moviesData.find(movie => movie.id === movieId);
         this.setState({ movie, isLoaded: true  })
-       });
+      });
     }
 
   render() {
