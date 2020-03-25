@@ -25,27 +25,6 @@ export default class Details extends Component {
        });
     }
 
-/*   componentDidMount() {
-   let getData = () => {
-      return new Promise((resolve) => {
-        fetch('/rest/shows')
-        .then((response) => {
-          return response.json();
-        })
-        .then((moviesData) => {
-          this.setState({ moviesData});
-          resolve();
-        });
-      })
-    }
-    
-    getData().then(() => {
-      let movieId = this.props.match.params.movieId;
-      let movie = this.state.moviesData.find(movie => movie.id === movieId);
-      this.setState({ movie, isLoaded: true  })
-    })
-  } */
-
   render() {
     if(!this.state.isLoaded){
       return <div>Loading...</div>
