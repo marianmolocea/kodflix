@@ -8,8 +8,7 @@ export default class Movies extends Component {
     super();
     this.state = {
       moviesData: [],
-      isLoaded: false,
-      imageIsLoaded: false,
+      isLoaded: false
     }
   }
 
