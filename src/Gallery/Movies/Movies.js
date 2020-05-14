@@ -1,34 +1,30 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import Movie from '../Movie/Movie'
 
-export default class Movies extends Component {
+export default function Movies() {
 
-  constructor(){
-    super();
-    this.state = {
-      moviesData: []
-    }
-  }
+  let [movies, setMovies] = useState('');
+  let [isLoaded, setIsLoaded] = useState(false);
 
-  componentDidMount() {
-    fetch('/rest/shows')
-      .then((response) => {
-        return response.json();
-      })
-      .then((moviesData) => {
-        this.setState({moviesData});
-      });
+  useEffect(() => {
+    if(!isLoaded) {
+      (async () => {
+          const response = await fetch('/rest/shows');
+          const moviesData = await response.json();
+          console.log(moviesData)
+          setMovies(moviesData.data.movies)
+          setIsLoaded(true)
+      })()
   }
+}, [isLoaded])
 
-  render() {
-    return (
-      this.state.moviesData.map(movie => 
-      <Movie
-        key={movie.id}
-        id={movie.id}
-        image={movie.image}
-        title={movie.title} 
-      />
-    ));
-  }
+  return (
+    movies && movies.map(movie => 
+    <Movie
+      key={movie.id}
+      id={movie.id}
+      image={movie.image}
+      title={movie.title} 
+    />
+  ));
 }
