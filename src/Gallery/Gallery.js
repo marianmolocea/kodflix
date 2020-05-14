@@ -1,6 +1,5 @@
 import React from 'react';
 import Movies from './Movies/Movies'
-import GetMoviesData from './Movies/GetMoviesData'
 
 import './Gallery.css';
 

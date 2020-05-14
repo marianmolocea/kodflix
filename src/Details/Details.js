@@ -1,36 +1,27 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Details.css'
 import MovieDetails from './MovieDetails/MovieDetails'
 
-export default class Details extends Component {
+export default function Details(props) {
 
-  constructor() {
-    super();
-    this.state = { 
-      moviesData: [],
-      isLoaded: false,
-      movie: {},
+    let [movie, setMovie] = useState('');
+    let [isLoaded, setIsLoaded] = useState(false);
+  
+    useEffect(() => {
+      if(!isLoaded) {
+        (async () => {
+            const response = await fetch(`/rest/shows/${props.match.params.movieId}`);
+            const movieData = await response.json();
+            setMovie(movieData.data.movie)
+            setIsLoaded(true)
+        })()
     }
-  }
+  }, [isLoaded])
 
-  componentDidMount() {
-    fetch('/rest/shows')
-      .then((response) => {
-         return response.json();
-      })
-      .then((moviesData) => {
-        let movieId = this.props.match.params.movieId;
-        let movie = moviesData.data.movies.find(movie => movie._id === movieId);
-        this.setState({ movie, isLoaded: true  })
-      });
-    }
-
-  render() {
-    return !this.state.isLoaded ? 
-      <div>Loading...</div> :
-      !this.state.movie ?
-        <Redirect to='/not-found' /> :
-        <MovieDetails movie={this.state.movie} />
-  }
+  return !isLoaded ? 
+    <div>Loading...</div> :
+    !movie ?
+      <Redirect to='/not-found' /> :
+      <MovieDetails movie={movie} />
 }

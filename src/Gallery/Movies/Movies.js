@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Movie from '../Movie/Movie'
+import Loader from '../../Loader/Loader'
 
 export default function Movies() {
 
@@ -11,7 +12,6 @@ export default function Movies() {
       (async () => {
           const response = await fetch('/rest/shows');
           const moviesData = await response.json();
-          console.log(moviesData)
           setMovies(moviesData.data.movies)
           setIsLoaded(true)
       })()
@@ -19,12 +19,19 @@ export default function Movies() {
 }, [isLoaded])
 
   return (
-    movies && movies.map(movie => 
-    <Movie
-      key={movie._id}
-      id={movie._id}
-      image={movie.image}
-      title={movie.title} 
-    />
-  ));
+    <>
+    {
+      !movies ?
+        <Loader /> :
+        movies.map(movie => 
+          <Movie
+            key={movie._id}
+            id={movie._id}
+            image={movie.image}
+            title={movie.title} 
+          />
+        )
+    }
+    </>
+  )
 }
