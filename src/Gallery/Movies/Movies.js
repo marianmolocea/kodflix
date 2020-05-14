@@ -21,8 +21,8 @@ export default function Movies() {
   return (
     movies && movies.map(movie => 
     <Movie
-      key={movie.id}
-      id={movie.id}
+      key={movie._id}
+      id={movie._id}
       image={movie.image}
       title={movie.title} 
     />

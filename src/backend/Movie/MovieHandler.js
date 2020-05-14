@@ -3,11 +3,7 @@ const Movie = require('./MovieSchema');
 
 exports.createNewMovie = async (req, res) => {
     try {
-        const newMovie = await Movie.create({
-            "image": "arrow.png",
-            "title": "Arrow",
-            "synopsis": "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five year later a changed man, determined to clean up the city as a hooded vigilante armed with a bow."
-        });
+        const newMovie = await Movie.create(req.body);
         res.status(201).json({
             status: "success",
             data: {

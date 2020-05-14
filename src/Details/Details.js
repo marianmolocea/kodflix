@@ -21,7 +21,7 @@ export default class Details extends Component {
       })
       .then((moviesData) => {
         let movieId = this.props.match.params.movieId;
-        let movie = moviesData.find(movie => movie.id === movieId);
+        let movie = moviesData.data.movies.find(movie => movie._id === movieId);
         this.setState({ movie, isLoaded: true  })
       });
     }
