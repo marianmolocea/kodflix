@@ -1,16 +1,23 @@
 const express = require('express');
-const app = express();
-const port = process.env.PORT || 3001;
-const movieData = require('./movieData.js');
+const bodyParser = require('body-parser');
 const path = require('path');
 
-app.get('/rest/shows', (req, res) => res.send(movieData));
+const movieHandler = require('./Movie/MovieHandler')
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+const app = express();
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '../../build')));
+app.use(express.static(path.join(__dirname,'../images')));
+
+app.get('/rest/shows', movieHandler.getAllMovies);
+app.post('/rest/shows', movieHandler.createNewMovie);
+
+app.get('/rest/shows/:id', movieHandler.getOneMovie);
+
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../../build', 'index.html'));
 });
 
-app.use(express.static(path.join(__dirname,'../images')));
+
+module.exports = app;
