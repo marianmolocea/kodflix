@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Details.css'
 import MovieDetails from './MovieDetails/MovieDetails'
+import Loader from '../Loader/Loader';
 
 export default function Details(props) {
 
@@ -17,10 +18,10 @@ export default function Details(props) {
             setIsLoaded(true)
         })()
     }
-  }, [isLoaded])
+  }, [isLoaded, props.match.params.movieId])
 
   return !isLoaded ? 
-    <div>Loading...</div> :
+    <Loader /> :
     !movie ?
       <Redirect to='/not-found' /> :
       <MovieDetails movie={movie} />
