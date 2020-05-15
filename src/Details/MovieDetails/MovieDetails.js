@@ -10,7 +10,7 @@ export default function MovieDetails({movie: {title, synopsis, image}}) {
       </h2>
       <div className="row">
         <p>{synopsis}</p>
-        <img src={require(`../../images/${image}`)} alt={title}/>
+        <img src={require(`../../images/covers/${image}`)} alt={title}/>
       </div>
       <Link to="/"><button className="button">Back to home page</button></Link>
     </div>
