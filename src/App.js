@@ -6,6 +6,7 @@ import Gallery from './Gallery/Gallery';
 import Details from './Details/Details';
 import NotFound from './NotFound/NotFound'
 import NavBar from './NavBar/NavBar'
+import ManageTvShows from './ManageTvShows/ManageTvShows'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/' component={Gallery} />
         <Route exact path='/:movieId' render={(props) => <Details {...props} />} />
         <Route exact path='/not-found' component={NotFound} />
+        <Route exact path='/manage/tv-shows' component={ManageTvShows} />
       </div>
     </Router>
   );

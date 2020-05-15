@@ -12,13 +12,17 @@ export default function NavBar() {
         setIsOpen(!isOpen)
     }
 
+    const closeMenu = () => {
+        setIsOpen(false)
+    }
+
     return (
         <>
             <div className="NavBar">
                 <Logo />
                 <Menu onClick={toggleMenu}/>
             </div>
-            <VerticalMenu onClick={toggleMenu} isOpen={isOpen}/>
+            <VerticalMenu onClick={toggleMenu} isOpen={isOpen} closeMenu={closeMenu}/>
         </>
     )
 }
