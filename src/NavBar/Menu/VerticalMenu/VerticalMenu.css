@@ -1,0 +1,37 @@
+.VerticalMenu {
+    position: absolute;
+    height: 100%;
+    width: 240px;
+    right: -240px;
+    top: 0;
+    padding: 10px;
+    background-color: #111;
+    border-left: 2px solid crimson;
+    z-index: 10;
+    transition: right ease-in 0.2s;
+}
+
+.VerticalMenu .menu-item {
+    margin-top: 20px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.VerticalMenu .menu-item:hover {
+    border-bottom: 1px solid crimson;
+}
+
+.VerticalMenu .close {
+    font-size: 36px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.VerticalMenu.active {
+    right: 0;
+}

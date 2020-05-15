@@ -2,17 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './MovieDetails.css'
 
-export default function MovieDetails(props) {
+export default function MovieDetails({movie: {title, synopsis, image}}) {
   return (
     <div className="MovieDetails">
       <h2>
-        {props.movie.title}
+        {title}
       </h2>
       <div className="row">
-        <p>{props.movie.synopsis}</p>
-        <img src={require(`../../images/${props.movie.image}`)} alt={props.movie.title}/>
+        <p>{synopsis}</p>
+        <img src={require(`../../images/${image}`)} alt={title}/>
       </div>
-      <Link to="/"><button>Back to home page</button></Link>
+      <Link to="/"><button className="button">Back to home page</button></Link>
     </div>
   )
 }

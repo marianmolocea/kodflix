@@ -2,6 +2,7 @@
     font-size: 28px;
     color: #ddd;
     justify-self: flex-end;
-    background-color: none;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
 }

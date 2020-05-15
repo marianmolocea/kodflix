@@ -2,10 +2,10 @@ import React from 'react'
 import './Menu.css'
 import {FiMenu} from 'react-icons/fi'
 
-export default function Menu() {
+export default function Menu({onClick}) {
     return (
-        <div className="Menu">
+        <button className="Menu" onClick={onClick}>
             <FiMenu />
-        </div>
+        </button>
     )
 }
