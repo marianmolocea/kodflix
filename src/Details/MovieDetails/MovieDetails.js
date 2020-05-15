@@ -2,17 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './MovieDetails.css'
 
-export default function MovieDetails({movie: {title, synopsis, image}}) {
+export default function MovieDetails({movie: {title, synopsis, image, wallpaper}}) {
+  let imgUrl = require(`../../images/wallpapers/${wallpaper}`);
+
   return (
-    <div className="MovieDetails">
-      <h2>
-        {title}
-      </h2>
-      <div className="row">
+    <div className="MovieDetails" style={{backgroundImage: `url(${imgUrl})`}}>
+      <div className="overlay"></div>
+      <div className="container">
+        <h1>
+          {title}
+        </h1>
         <p>{synopsis}</p>
-        <img src={require(`../../images/covers/${image}`)} alt={title}/>
+        <Link to="/"><button className="button">Back to home page</button></Link>
       </div>
-      <Link to="/"><button className="button">Back to home page</button></Link>
     </div>
   )
 }

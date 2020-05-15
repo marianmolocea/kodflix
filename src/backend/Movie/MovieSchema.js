@@ -5,6 +5,10 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    wallpaper: {
+        type: String,
+        required: true,
+    },
     title: {
         type: String,
         required: true,
