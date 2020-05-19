@@ -8,6 +8,7 @@ import NotFound from './NotFound/NotFound';
 import NavBar from './NavBar/NavBar';
 import ManageTvShows from './ManageTvShows/ManageTvShows';
 import Play from './Play/Play';
+import Login from './Login/Login';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/:movieId/play' render={(props) => <Play {...props} />} />
         <Route exact path='/not-found' component={NotFound} />
         <Route exact path='/manage/tv-shows' component={ManageTvShows} />
+        <Route exact path='/manage/login' component={Login} />
       </div>
     </Router>
   );

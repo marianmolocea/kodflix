@@ -20,7 +20,7 @@ export default function VerticalMenu({ onClick, isOpen, closeMenu }) {
         onClick={closeMenu}
         text=" MANAGE TV SHOWS"
         icon={<FiMonitor className="icon" />}
-        url={'/manage/tv-shows'}
+        url={'/manage/login'}
       />
     </div>
   );
