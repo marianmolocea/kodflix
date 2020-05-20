@@ -16,7 +16,10 @@ const movieSchema = new mongoose.Schema({
     synopsis: {
         type: String,
         required: true,
-    } 
+    },
+    trailer: {
+        type: String
+    }
 });
 
 const Movie = mongoose.model('Movie', movieSchema);

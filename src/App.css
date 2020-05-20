@@ -20,6 +20,11 @@ p{
   margin: 0;
 }
 
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
 .button {
   background-color: crimson;
   padding: 15px 30px;
