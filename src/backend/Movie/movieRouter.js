@@ -17,6 +17,7 @@ router
 
 router
     .route('/:id')
-    .delete(movieHandler.deleteMovie);
+    .delete(movieHandler.deleteMovie)
+    .patch(movieHandler.updateMovie)
 
 module.exports = router
