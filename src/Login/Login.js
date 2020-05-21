@@ -8,9 +8,12 @@ export default function Login() {
     let [redirect, setRedirect] = useState(false)
 
     const checkLogin = () => {
-        return username === "admin" && password === "admin" ?
-            setRedirect(true) :
+        if(username === "admin" && password === "admin") {
+            localStorage.setItem('isLogin', true)
+            setRedirect(true)
+        } else {
             alert('Incorrect user or password')
+        }
     }
     return (
         <div className="Login">
@@ -28,7 +31,7 @@ export default function Login() {
             />
             <button className="button" onClick={() => checkLogin()}>Login</button>
             
-            { redirect && <Redirect to="/manage/tv-shows" /> }
+            {(localStorage.isLogin || redirect) && <Redirect to="/manage/tv-shows" /> }
         </div>
     )
 }

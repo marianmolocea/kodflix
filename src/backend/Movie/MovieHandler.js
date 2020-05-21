@@ -1,8 +1,17 @@
 const Movie = require('./MovieSchema');
 
+
 exports.createNewMovie = async (req, res) => {
     try {
-        const newMovie = await Movie.create(req.body);
+        let movie = {
+            image: req.files[0].originalname,
+            wallpaper: `w-${req.files[1].originalname}`,
+            title: req.body.title,
+            synopsis: req.body.synopsis,
+            trailer: req.body.trailer
+        }
+
+        const newMovie = await Movie.create(movie);
         res.status(201).json({
             status: "success",
             data: {
